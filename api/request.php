@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_SESSION["req"])) {
     $doc["request"] = 2;
-    $doc["id"] = $_SESSION["req"];
+    $doc["student_id"] = $_SESSION["req"];
     echo json_encode($doc);
     return;
 } else {
@@ -14,3 +14,4 @@ if (isset($_SESSION["req"])) {
     echo json_encode($doc);
     return;
 }
+             

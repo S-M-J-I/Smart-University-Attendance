@@ -19,6 +19,9 @@ if (isset($_POST["submit"])) {
 
     $id = mysqli_fetch_assoc($res)["id"];
 
+    $sql = "INSERT INTO `attendance`(`STUDENT_ID`, `COURSE_ID`, `IS_PRESENT`) VALUES ('$id', 6, 'false')";
+    $res = mysqli_query($connection, $sql) or die("Failed " . mysqli_error($connection));
+
     $_SESSION["req"] = $id;
 }
 
